@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -93,6 +94,7 @@
             z-index: 10;
         }
 
+
         @media (min-width: 640px) {
             .card-grid-wrapper {
                 grid-template-columns: repeat(2, 1fr);
@@ -116,23 +118,23 @@
             background-color: #f3f4f6;
         }
 
-        .feature-carousel {
+        .feature-carousel { 
             max-width: 900px;
             margin: 0 auto;
             border-radius: 0.75rem;
             overflow: hidden;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            height: 500px;
         }
 
-        .feature-carousel .carousel-item {
-            height: 100%;
+        .feature-carousel .carousel-item { 
+            display: block;
         }
 
         .feature-carousel .carousel-item img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            object-fit: contain; 
+            display: block;
         }
 
         .carousel-caption {
@@ -146,242 +148,224 @@
 
 <body>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-    <div class="container-fluid">
-        <a class="navbar-brand nav-link active" aria-current="index.html" href="index.html"><b>ITALY</b></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand nav-link active" aria-current="index.html" href="index.html"><b>ITALY</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="index.html" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="history.html" href="history.html">History</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="gallery.html" href="gallery.html">Gallery</a>
-                </li>
-            </ul>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="index.html" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="history.html" href="history.html">History</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="gallery.html" href="gallery.html">Gallery</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<header style="position: relative; width: 100%; height: 100vh;">
-    <video autoplay muted loop playsinline id="bg-video"
+    <header style="position: relative; width: 100%; height: 100vh;">
+        <video autoplay muted loop playsinline id="bg-video"
         style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        <source src="assets/video.mp4" type="video/mp4">
+        <source src="assets/gallery_video.mp4" type="video/mp4">
     </video>
 
-    <div
-        style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0.4); display: flex; align-items: center; justify-content: center;">
-        <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
-            <h1 class="hero-title"
-                style="font-size: 8rem; font-weight: 800; color: white; letter-spacing: -0.025em; margin-bottom: 25px;">
-                ITALY
-            </h1>
+        <div
+            style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0.4); display: flex; align-items: center; justify-content: center;">
+            <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                <h1 class="hero-title"
+                    style="font-size: 8rem; font-weight: 800; color: white; letter-spacing: -0.025em; margin-bottom: 25px;">
+                    ITALY
+                </h1>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<div style="height: 1rem;"></div>
+    <div style="height: 1rem;"></div>
 
-<h1 class="text-title" style="font-size: 3rem; font-weight: 800; color: white; letter-spacing: -0.025em; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    <h1 class="text-title" style="font-size: 3rem; font-weight: 800; color: white; letter-spacing: -0.025em; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     font-family: 'Georgia', serif; margin-top: 4rem; text-align: center;">
-    <i>Wonders of Italy</i>
-</h1>
+        <i>Wonders of Italy</i>
+    </h1>
 
-<main style="padding-top: 12rem; background-color: #413231;">
-    <div class="wide-container">
-        <div class="card-grid-wrapper">
+    <main style="padding-top: 12rem; background-color: #413231;">
+        <div class="wide-container">
+            <div class="card-grid-wrapper">
 
-            <div>
-                <div class="card-inner">
-                    <img src="assets/amalficoast.jpg" style="width: 100%; height: 10rem; object-fit: cover;"
-                        alt="Card Placeholder Image">
-                    <div style="padding: 1.5rem;">
-                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem;">
-                            Amalfi Coast - The Jewel of the Mediterranean</h3>
-                        <p style="color: #4b5563; font-size: 1rem; line-height: 1.625;">
-                            Colorful cliffside villages, scenic coastal drives, and crystal-clear blue waters.
-                        </p>
+                <div>
+                    <div class="card-inner">
+                        <img src="assets/amalficoast.jpg" style="width: 100%; height: 10rem; object-fit: cover;"
+                            alt="Card Placeholder Image">
+                        <div style="padding: 1.5rem;">
+                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem;">
+                                Amalfi Coast - The Jewel of the Mediterranean</h3>
+                            <p style="color: #4b5563; font-size: 1rem; line-height: 1.625;">
+                                Colorful cliffside villages, scenic coastal drives, and crystal-clear blue waters.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="card-inner">
+                        <img src="assets/roma.jpg" style="width: 100%; height: 10rem; object-fit: cover;"
+                            alt="Card Placeholder Image">
+                        <div style="padding: 1.5rem;">
+                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem;"> The
+                                Colosseum - The Eternal City</h3>
+                            <p style="color: #4b5563; font-size: 1rem; line-height: 1.625;">
+                                Ancient ruins, stunning architecture, and a vibrant street life.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="card-inner">
+                        <img src="assets/venis.jpg" style="width: 100%; height: 10rem; object-fit: cover;"
+                            alt="Card Placeholder Image">
+                        <div style="padding: 1.5rem;">
+                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem;">
+                                Venice - The Floating City</h3>
+                            <p style="color: #4b5563; font-size: 1rem; line-height: 1.625;">
+                                Romantic canals, historic architecture, and vibrant culture.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="card-inner">
+                        <img src="assets/florens.jpg" style="width: 100%; height: 10rem; object-fit: cover;"
+                            alt="Card Placeholder Image">
+                        <div style="padding: 1.5rem;">
+                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem;">
+                                Florence - The Cradle of the Renaissance</h3>
+                            <p style="color: #4b5563; font-size: 1rem; line-height: 1.625;">
+                                Birthplace of great artists like Michelangelo and Leonardo da Vinci.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="card-inner">
+                        <img src="assets/tuscani.jpg" style="width: 100%; height: 10rem; object-fit: cover;"
+                            alt="Card Placeholder Image">
+                        <div style="padding: 1.5rem;">
+                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem;">
+                                Tuscany - The Land of Rolling Hills</h3>
+                            <p style="color: #4b5563; font-size: 1rem; line-height: 1.625;">
+                                Picturesque landscapes, vineyards, and charming medieval towns.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="card-inner">
+                        <img src="assets/vatican.jpg" style="width: 100%; height: 10rem; object-fit: cover;"
+                            alt="Card Placeholder Image">
+                        <div style="padding: 1.5rem;">
+                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem;">
+                                Vatican City - The Heart of Faith and Art</h3>
+                            <p style="color: #4b5563; font-size: 1rem; line-height: 1.625;">
+                                Home to St. Peter's Basilica and the Sistine Chapel.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="card-inner">
+                        <img src="assets/dolomite.jpg" style="width: 100%; height: 10rem; object-fit: cover;"
+                            alt="Card Placeholder Image">
+                        <div style="padding: 1.5rem;">
+                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem;">
+                                Dolomites - The Mountains of Light</h3>
+                            <p style="color: #4b5563; font-size: 1rem; line-height: 1.625;">
+                                Breathtaking views and outdoor adventures await.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="card-inner">
+                        <img src="assets/cuisine.jpg" style="width: 100%; height: 10rem; object-fit: cover;"
+                            alt="Card Placeholder Image">
+                        <div style="padding: 1.5rem;">
+                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem;">
+                                Italian Cuisine - A Taste of Tradition</h3>
+                            <p style="color: #4b5563; font-size: 1rem; line-height: 1.625;">
+                                Savor the authentic flavors of Italy's diverse regions.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div>
-                <div class="card-inner">
-                    <img src="assets/roma.jpg" style="width: 100%; height: 10rem; object-fit: cover;"
-                        alt="Card Placeholder Image">
-                    <div style="padding: 1.5rem;">
-                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem;"> The
-                            Colosseum - The Eternal City</h3>
-                        <p style="color: #4b5563; font-size: 1rem; line-height: 1.625;">
-                            Ancient ruins, stunning architecture, and a vibrant street life.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="card-inner">
-                    <img src="assets/venis.jpg" style="width: 100%; height: 10rem; object-fit: cover;"
-                        alt="Card Placeholder Image">
-                    <div style="padding: 1.5rem;">
-                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem;">
-                            Venice - The Floating City</h3>
-                        <p style="color: #4b5563; font-size: 1rem; line-height: 1.625;">
-                            Romantic canals, historic architecture, and vibrant culture.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="card-inner">
-                    <img src="assets/florens.jpg" style="width: 100%; height: 10rem; object-fit: cover;"
-                        alt="Card Placeholder Image">
-                    <div style="padding: 1.5rem;">
-                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem;">
-                            Florence - The Cradle of the Renaissance</h3>
-                        <p style="color: #4b5563; font-size: 1rem; line-height: 1.625;">
-                            Birthplace of great artists like Michelangelo and Leonardo da Vinci.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="card-inner">
-                    <img src="assets/tuscani.jpg" style="width: 100%; height: 10rem; object-fit: cover;"
-                        alt="Card Placeholder Image">
-                    <div style="padding: 1.5rem;">
-                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem;">
-                            Tuscany - The Land of Rolling Hills</h3>
-                        <p style="color: #4b5563; font-size: 1rem; line-height: 1.625;">
-                            Picturesque landscapes, vineyards, and charming medieval towns.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="card-inner">
-                    <img src="assets/vatican.jpg" style="width: 100%; height: 10rem; object-fit: cover;"
-                        alt="Card Placeholder Image">
-                    <div style="padding: 1.5rem;">
-                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem;">
-                            Vatican City - The Heart of Faith and Art</h3>
-                        <p style="color: #4b5563; font-size: 1rem; line-height: 1.625;">
-                            Home to St. Peter's Basilica and the Sistine Chapel.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="card-inner">
-                    <img src="assets/dolomite.jpg" style="width: 100%; height: 10rem; object-fit: cover;"
-                        alt="Card Placeholder Image">
-                    <div style="padding: 1.5rem;">
-                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem;">
-                            Dolomites - The Mountains of Light</h3>
-                        <p style="color: #4b5563; font-size: 1rem; line-height: 1.625;">
-                            Breathtaking views and outdoor adventures await.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div>
-                <div class="card-inner">
-                    <img src="assets/cuisine.jpg" style="width: 100%; height: 10rem; object-fit: cover;"
-                        alt="Card Placeholder Image">
-                    <div style="padding: 1.5rem;">
-                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem;">
-                            Italian Cuisine - A Taste of Tradition</h3>
-                        <p style="color: #4b5563; font-size: 1rem; line-height: 1.625;">
-                            Savor the authentic flavors of Italy's diverse regions.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <h1 class="text-title" style="font-size: 3rem; font-weight: 800; color: white; letter-spacing: -0.025em; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            <h1 class="text-title" style="font-size: 3rem; font-weight: 800; color: white; letter-spacing: -0.025em; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
             font-family: 'Georgia', serif; margin-top: 4rem; text-align: center;">
-            The Spirit of Italy: <i>Art, Nature, and Tradition</i>
-        </h1>
+                The Spirit of Italy: <i>Art, Nature, and Tradition</i>
+            </h1>
 
-        <div style="height: 4rem;"></div>
-    </div>
-
-
-    <div class="carousel-section">
-        <div id="imageCarousel" class="feature-carousel carousel slide">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="assets/art.png" class="d-block w-100"
-                        onerror="this.onerror=null; this.src='assets/art.png';" alt="ART">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Art</h5>
-                        <p>wait lang</p>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <img src="assets/nature.png" class="d-block w-100"
-                        onerror="this.onerror=null; this.src='assets/nature.png';" alt="NATURE">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Nature</h5>
-                        <p>Sun-drenched beaches and ancient Greek ruins.</p>
-                    </div>
-                </div>
-
-                <div class="carousel-item">
-                    <img src="assets/tradition.png" class="d-block w-100"
-                        onerror="this.onerror=null; this.src='assets/tradition.png';" alt="TRADITION">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Tradition</h5>
-                        <p>A masterpiece of Gothic architecture in Italy's fashion capital.</p>
-                    </div>
-                </div>
-            </div>
-
-            <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-
-            <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <div style="height: 4rem;"></div>
         </div>
-    </div>
 
+        <div class="carousel-section">
+            <div id="imageCarousel" class="feature-carousel carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/art.png" class="d-block w-100" alt="ART">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/nature.png" class="d-block w-100" alt="NATURE">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/tradition.png" class="d-block w-100" alt="TRADITION">
+                    </div>
+                </div>
 
-    <div style="height: 10rem;"></div>
-</main>
+                <button class="carousel-control-prev" type="button" data-bs-target="#imageCarousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
 
-<!--SPACER  -->
+                <button class="carousel-control-next" type="button" data-bs-target="#imageCarousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <div style="height: 10rem;"></div>
+    </main>
+
     <div style="height: 4rem;"></div>
 
-<!--FOOTER  -->
-<div class="card" style="background-color: #5C474C; border: none; color: white;">
-  <div class="card-body text-center">
-    <h5 class="card-title">© 2025 Miel's Showcase. All rights reserved.</h5>
-    <p class="card-text">Ciao from Italy — <I>where history and beauty meet</I></p>
-  </div>
-</div>
+    <div class="card" style="background-color: #5C474C; border: none; color: white;">
+        <div class="card-body text-center">
+            <h5 class="card-title">© 2025 Miel's Showcase. All rights reserved.</h5>
+            <p class="card-text">Ciao from Italy — <I>where history and beauty meet</I></p>
+        </div>
+    </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous">
+    </script>
 </body>
+
 </html>
