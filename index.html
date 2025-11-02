@@ -118,7 +118,7 @@
             background-color: #f3f4f6;
         }
 
-        .feature-carousel { 
+        .feature-carousel {
             max-width: 900px;
             margin: 0 auto;
             border-radius: 0.75rem;
@@ -126,15 +126,12 @@
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
 
-        .feature-carousel .carousel-item { 
-            display: block;
-        }
-
         .feature-carousel .carousel-item img {
             width: 100%;
             height: auto;
-            object-fit: contain; 
+            object-fit: contain;
             display: block;
+            /* This display: block is fine for the image element */
         }
 
         .carousel-caption {
@@ -175,9 +172,9 @@
 
     <header style="position: relative; width: 100%; height: 100vh;">
         <video autoplay muted loop playsinline id="bg-video"
-        style="width: 100%; height: 100%; object-fit: cover; display: block;">
-        <source src="assets/gallery_video.mp4" type="video/mp4">
-    </video>
+            style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            <source src="assets/video.mp4" type="video/mp4">
+        </video>
 
         <div
             style="position: absolute; top: 0; right: 0; bottom: 0; left: 0; background-color: rgba(0, 0, 0, 0.4); display: flex; align-items: center; justify-content: center;">
@@ -363,9 +360,9 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous">
-    </script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+
 </body>
 
 </html>
